@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Untracable AI — the AI that never leaves your phone</title>
+<meta name="description" content="Untracable AI puts a real language model inside your iPhone. Chat, read documents, analyse photos and search the web — with no account, no cloud and no connection required.">
+<meta property="og:title" content="Untracable AI">
+<meta property="og:description" content="A real language model, running on your iPhone. No account. No cloud. No logs.">
+<style>
+  :root{
+    --bg:#000000; --surface:#050A06; --surface2:#0A0F0A; --stroke:#1E2A1E;
+    --text:#E8E8E8; --text2:#B0B0B0; --text3:#808080;
+    --accent:#00FF66; --accent2:#00A63F; --ink:#00FF66;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#FFFFFF; --surface:#F4F6F4; --surface2:#EFF3EF; --stroke:#D8E0D8;
+      --text:#111111; --text2:#37413B; --text3:#5A625C;
+      --accent:#006B2B; --accent2:#00541F; --ink:#006B2B;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:44px 20px 100px}
+  .mark{font-family:var(--mono);font-weight:800;font-size:16px}
+  .mark span{color:var(--ink)}
+  h1{font-size:46px;line-height:1.08;letter-spacing:-1.2px;margin:34px 0 14px}
+  h1 em{font-style:normal;color:var(--ink)}
+  h2{font-family:var(--mono);font-size:18px;margin:56px 0 14px}
+  h2::before{content:"> ";color:var(--ink)}
+  h3{font-size:16.5px;margin:0 0 6px}
+  p,li{color:var(--text2)}
+  .lede{font-size:19px;color:var(--text);max-width:640px}
+  .terminal{background:var(--surface);border:1px solid var(--stroke);border-radius:12px;
+    padding:20px 22px;margin:30px 0;font-family:var(--mono);font-size:13.5px;line-height:1.9;
+    color:var(--text2);overflow-x:auto}
+  .terminal .p{color:var(--ink)}
+  .terminal .ok{color:var(--ink)}
+  .terminal .v{color:var(--text)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:22px 0}
+  .card{background:var(--surface);border:1px solid var(--stroke);border-radius:10px;padding:18px 20px}
+  .card h3{font-family:var(--mono);font-size:14px;color:var(--text);letter-spacing:.2px}
+  .card h3::before{content:"[ ";color:var(--ink)}
+  .card h3::after{content:" ]";color:var(--ink)}
+  .card p{margin:8px 0 0;font-size:14.5px}
+  .points{list-style:none;padding:0;margin:20px 0}
+  .points li{position:relative;padding-left:26px;margin:12px 0;color:var(--text2)}
+  .points li::before{content:"[ok]";position:absolute;left:0;top:0;
+    font-family:var(--mono);font-size:11px;color:var(--ink)}
+  .points b{color:var(--text)}
+  .note{font-size:14.5px;color:var(--text3);border-left:2px solid var(--accent2);padding-left:14px;margin:26px 0}
+  a{color:var(--ink)}
+  .cta{display:inline-block;font-family:var(--mono);font-weight:700;font-size:15px;
+    color:#000;background:var(--accent);border-radius:10px;padding:14px 26px;
+    text-decoration:none;margin-top:8px}
+  @media (prefers-color-scheme: light){ .cta{color:#fff} }
+  hr{border:0;border-top:1px dashed var(--stroke);margin:56px 0}
+  footer{color:var(--text3);font-size:14px}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+  th,td{text-align:left;padding:11px 8px;border-bottom:1px solid var(--stroke);vertical-align:top}
+  th{font-family:var(--mono);font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--ink)}
+  td:first-child{color:var(--text);white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="mark"><span>Untracable</span> AI</div>
+
+  <h1>A real language model.<br><em>Running on your iPhone.</em></h1>
+  <p class="lede">No account. No cloud. No logs. Untracable AI ships with the model inside it, so the
+  first thing it does on launch is work — in aeroplane mode, in a basement, on a plane, with the SIM
+  out.</p>
+
+  <div class="terminal">
+    <div><span class="p">untracable@local</span>:~$ ./init</div>
+    <div><span class="ok">[ok]</span>&nbsp; engine &nbsp;········&nbsp; <span class="v">llama-3.2-1b</span></div>
+    <div><span class="ok">[--]</span>&nbsp; network &nbsp;·······&nbsp; <span class="v">off</span></div>
+    <div><span class="ok">[ok]</span>&nbsp; telemetry &nbsp;·····&nbsp; <span class="v">none</span></div>
+    <div><span class="ok">[ok]</span>&nbsp; logs &nbsp;··········&nbsp; <span class="v">none</span></div>
+    <div>&gt; awaiting input</div>
+  </div>
+
+  <h2>Why it is different</h2>
+  <ul class="points">
+    <li><b>The model is in the app.</b> Llama 3.2 1B Instruct ships inside the download — there is
+      nothing to fetch on first launch and no setup screen to get through.</li>
+    <li><b>Your conversation never goes anywhere.</b> Prompts and replies are computed on the phone's
+      own silicon and written only to the app's storage.</li>
+    <li><b>No account, ever.</b> No email, no sign-in, no profile, nothing to leak.</li>
+    <li><b>Nothing measured.</b> No analytics, no crash telemetry, no advertising identifiers, no
+      third-party SDKs.</li>
+    <li><b>The internet is a switch you control.</b> Web search is off until you tap the globe, and it
+      goes straight from your phone to the search engine.</li>
+  </ul>
+
+  <h2>What it does</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>chat</h3>
+      <p>A full conversation with an on-device model, laid out as a terminal session. Long answers keep
+      their formatting — headings, lists, tables and code blocks.</p>
+    </div>
+    <div class="card">
+      <h3>documents</h3>
+      <p>Attach a PDF, Word, Excel, PowerPoint, HTML, CSV, JSON or source file. The text is extracted
+      on the phone and the relevant passage is fed to the model — and shown to you.</p>
+    </div>
+    <div class="card">
+      <h3>photos</h3>
+      <p>Attach a picture from the library or the camera. Text and subject matter are read on device
+      with Apple's Vision framework, then discussed by the model.</p>
+    </div>
+    <div class="card">
+      <h3>web search</h3>
+      <p>Optional and off by default. Web, news, images and video modes, with results as cards you can
+      open in the built-in browser.</p>
+    </div>
+    <div class="card">
+      <h3>page assistant</h3>
+      <p>Reading something long? The in-app browser can summarise the page or answer questions about
+      it — still using the model on your phone.</p>
+    </div>
+    <div class="card">
+      <h3>voice</h3>
+      <p>Dictate instead of typing, using Apple's built-in speech recognition.</p>
+    </div>
+    <div class="card">
+      <h3>your own models</h3>
+      <p>Import any GGUF file from the Files app and switch to it. The bundled model stays as the
+      default.</p>
+    </div>
+    <div class="card">
+      <h3>your own keys</h3>
+      <p>Prefer a frontier model for a hard question? Add your own Gemini, ChatGPT, Claude, Groq,
+      Mistral, DeepSeek, Qwen or custom endpoint key and switch per conversation.</p>
+    </div>
+  </div>
+
+  <h2>Built like a terminal</h2>
+  <p>Black, neon green, monospaced. Every turn is a prompt line and every answer is its output. Nine
+  accent colours and a light theme are a tap away in settings if green is not your colour.</p>
+
+  <h2>Honest about the network</h2>
+  <p>The offline claim is only worth something if it is specific, so here is exactly when the app uses
+  a connection:</p>
+  <table>
+    <tr><th>Feature</th><th>Network</th></tr>
+    <tr><td>Chat with the built-in model</td><td>None. Works in aeroplane mode.</td></tr>
+    <tr><td>Documents and photos</td><td>None. Extraction and vision run on device.</td></tr>
+    <tr><td>Web search / browser</td><td>Only when you enable it — your query goes to the search engine.</td></tr>
+    <tr><td>Dictation</td><td>Uses Apple's speech recognition, which may process audio on Apple's servers.</td></tr>
+    <tr><td>Cloud AI keys</td><td>Only if you add a key, and only to that provider.</td></tr>
+  </table>
+  <p class="note">There is no server belonging to this app. Nothing is uploaded to the developer,
+  because there is nowhere for it to go.</p>
+
+  <h2>Requirements</h2>
+  <p>iPhone running iOS 16.4 or later. The download is large — around 780 MB — because the model comes
+  with it; get it on Wi-Fi. A modern iPhone answers at a comfortable reading speed; older devices are
+  slower but work.</p>
+
+  <hr>
+  <h2>Get in touch</h2>
+  <p>Questions, bugs, or a feature you want:
+  <a href="mailto:sivavimelrajhen@gmail.com">sivavimelrajhen@gmail.com</a>.</p>
+  <p><a class="cta" href="mailto:sivavimelrajhen@gmail.com">Email the developer</a></p>
+
+  <hr>
+  <footer>
+    Untracable AI · on-device AI for iPhone ·
+    <a href="mailto:sivavimelrajhen@gmail.com">sivavimelrajhen@gmail.com</a><br>
+    Llama 3.2 is a Meta model used under the Llama 3.2 Community License.
+  </footer>
+
+</div>
+</body>
+</html>
